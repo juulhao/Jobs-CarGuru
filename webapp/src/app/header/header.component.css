@@ -1,0 +1,37 @@
+:host{
+    float: left;
+    width: 100%;
+    height: 56px;
+    margin-bottom: 20px; 
+}
+header{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    float: left;
+    width: 100%;
+}
+header img{
+    max-width: 132px;
+}
+.logo img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.nav_button{
+    border:none;
+    background:none;
+}
+.alert_user {
+    float: right;
+}
+.content_outside_nav {
+    float: right;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

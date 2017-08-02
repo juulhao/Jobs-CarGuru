@@ -1,0 +1,63 @@
+.bg_roxo{
+    background: #F65579;
+    height: 100vh;
+    width: 100vw;
+}
+.logo-white{
+    margin: 0 auto;
+    padding-top: 25px;
+    text-align: center;
+}
+.logo-white img{
+    max-width: 135px;
+}
+.modal_content {
+    position: absolute;
+    margin-top: 30px;
+    right: 5vw;
+    width: 90%
+}
+.content_intro {
+    line-height: 5vh;
+    margin-top: 30vh;
+}
+button{
+    background: none;
+    border: none;
+    outline: none;
+    float: right;
+}
+span{
+    color:#fff;
+    font-size: 2em;
+    font-weight: bold;
+     font-family: 'Lato', sans-serif;
+}
+.span_function{
+    float: left;
+    margin-top: 26px;
+}
+.span_function span{
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.small_span{
+    font-size: 1em;
+}
+.dark_pourple{
+    color: #9b2c5f;
+}
+.dark_pourple,.big_span{
+    font-size: 3.1em;
+}
+.line-divider {
+    width: 30%;
+    height: 1px;
+    background: #fff;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    margin-right: 83px;
+}

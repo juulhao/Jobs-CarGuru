@@ -1,0 +1,271 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+body{
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h2{
+    font-size: 40px;
+    text-align: left;
+}
+.container{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.hidden {
+    display: none!important;
+}
+.card_plans {
+    -webkit-box-shadow: 0px 16px 37px 2px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 16px 37px 2px rgba(0,0,0,0.33);
+    box-shadow: 0px 16px 37px 2px rgba(0,0,0,0.33);
+    border-radius: 10px;
+    float: left;
+    margin-top: 30px;
+    height: auto
+}
+.card_plans .row{
+    text-align: left
+}
+.promotional_container {
+    float: left;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80%;
+}
+.CardActive{
+    border: 1px solid #F65579;
+}
+.promotional_container button:not(:last-child) {
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #E0D4DB;
+    width: 100%;
+    line-height: 3.1;
+}
+.promotional_container button:last-child{
+    line-height: 3.1;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    background: #f65579;
+    margin-top: 10px;
+}
+.promotional_container button:last-child span{
+    color: #fff;
+}
+.promotional_container button img{
+    position: relative;
+    top: 7px;
+    margin-right: 20px;
+}
+.promotional_container button span{
+    font-family: 'Lato', sans-serif;
+    color: #A78297;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+button{
+outline: none;
+}
+.nextBtn{  
+    background: #F65579!important;
+    font-family: 'lato'!important;
+    text-align: left;
+    width: 143px!important;
+}
+.nextBtn span{
+    color: #fff!important;
+    font-weight: bolder!important;
+}
+.nextBtn img{
+    float: right;
+}
+.img-circle{
+    border-radius: 100%;    
+    height: 66.95px;
+    width: 66.95px;
+}
+.row{
+    float: left;
+    width: 100%;
+}
+
+
+.btn_nav {
+    float: left;
+    margin-left: 15px;
+}
+.avatar_thumb {
+    float: left;
+    width: 100%;
+    text-align: left;
+    height: 50px;
+}
+.avatar_thumb img{
+    position: relative;
+    top: -30px;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #f65579;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+}
+.border_line{
+    width: 100%;
+    height: 1px;
+    background: #dedede;
+    position: relative;
+    top: 92px;
+}
+.itens_planos{
+    padding: 0;
+}
+.itens_planos li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 10px;
+}
+.item_name_plan span{
+    color:#9B2C5F;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+}
+.icons_planos {
+    float: left;
+    margin-right: 25px;
+}
+.timer_service {
+    float: left;
+    border-top: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    width: 48%;
+}
+.timer_service .row:not(:first-child){
+    padding-top: 20px;
+}
+.timer_service small{
+    font-family: 'Lato',sans-serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #A78297;
+}
+.timer_service span{
+    font-size: 26px;
+    font-family: 'Open-sans', sans-serif;
+    color: #A78297;
+}
+.timer_service img{
+    margin-right: 10px;
+}
+.price_plan {
+    float: left;
+    border-top: 1px;
+    border: 1px solid #dedede;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    padding-top: 20px;
+    width: 50%;
+}
+.rs{
+    color: #654B55;
+    font-size: 26px;
+    font-family: 'Open sans', sans-serif;
+}
+.price_span{
+  color: #654B55;
+  font-family: 'Open sans', sans-serif;
+  font-size: 51px;
+}
+.margin-bottom-title-card{
+    margin-bottom: 5px;
+}
+.input-full-width{
+    width: 100%;
+    font-family: 'lato';
+    color: #ccc;
+}
+.itens_planos li span{
+    font-family: 'Lato', sans-serif;
+    color: #9B2C5F;
+    font-size: 15px;
+ }
+button.half_button {
+    width: 50%!important;
+    display: inline-block!important;
+    float: left!important;
+    border-radius: 0!important;
+    background: #551449!important;
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+    border-top: 1px solid #652A5A!important;
+}
+.options_addons li{
+list-style: none;
+display: inline-block
+}
+
+.title_white{
+    font-size: 30px;
+    color: #fff;
+    font-family: 'lato', sans-serif;
+    font-weight: 300
+}
+.hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 96px;
+  height: 96px;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: 0;
+}
+/* .autocomplete input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 90%;
+    outline: none;
+    margin-left: 30px;
+    padding-bottom: 10px;
+    color:#fff;
+    font-family: 'Lato', sans-serif;
+} */
+ 
+.hamburger span {
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background: #1a2580;
+}
+.bg_garagem{
+    background: #551449;
+    width: 100%;
+    float: left;
+    height: 100vh;
+}
+.footer_content {
+    float: left;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

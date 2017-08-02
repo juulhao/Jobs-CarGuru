@@ -1,0 +1,38 @@
+
+<div id="lavagem_basica" class="card_plans">
+  <form (submit)="postPlans($event)">
+    <div class="border_line"></div>
+    <div class="container">
+      <div class="avatar_thumb">
+        <img class="img-circle" md-card-image src="https://unsplash.it/200/300/?random">
+      </div>
+      <div class="row margin-bottom-title-card">
+        <span class="title-plans">{{planos.products[0].name}}</span>
+      </div>
+      <div class="row">
+        <ul class="itens_planos">
+          <li *ngFor="let plano of planos.products[0].features">
+            <span>{{plano.name}}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="timer_service">
+        <div class="row"> 
+          <small>tempo de serviço</small>
+        </div>
+        <div class="row">
+          <img src="../../../assets/imgs/icon_clock_roxo.svg" height="23"><span>{{planos.products[0].duration}}</span>
+        </div>
+      </div>
+      <div class="price_plan">
+        <span class="rs">R$</span><span class="price_span">{{planos.products[0].price}}</span>
+      </div>
+    </div>
+    <div class="promotional_container">
+      <button><img src="../../../assets/imgs/icon_cupom_add.svg" height="26"><span>Adicionar Cupom Promocional</span></button>
+      <div class="btn_next_plans">
+          <button id="plan_padrao" type="submit" md-button><span>Próximo</span></button>
+      </div>
+    </div>
+  </form>
+</div>

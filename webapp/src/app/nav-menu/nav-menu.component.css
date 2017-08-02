@@ -1,0 +1,38 @@
+:host {
+    background: #f65579;
+    color: #fff;
+    position: fixed;
+    right: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    min-width: 250px;
+    z-index: 9999;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.content_outside_nav {
+    float: right;
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    right: -50%;
+    top: 0;
+}
+ul{
+ padding: 0;
+}
+li{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ea3466;
+    padding-left: 15px;
+}
+li span{
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.05em;
+}

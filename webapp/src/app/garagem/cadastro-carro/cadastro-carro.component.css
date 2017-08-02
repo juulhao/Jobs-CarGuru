@@ -1,0 +1,42 @@
+.bg_garagem{
+    background: #551449;
+    width: 100%;
+    float: left;
+    height: 100vh;
+}
+header{
+    margin-top: 0;
+}
+span{
+    color: #fff;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+}
+button{
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+}
+button span{
+    color: #551449;
+    text-transform: uppercase;
+    float: left;
+}
+.content-bottom {
+    position: relative;
+    width: 100%;
+    float: left;
+    top: 35vh;
+}
+.half_button span{
+    color: #F65579;
+    float: none!important;
+}
+.btn_add_vehicle img{
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}

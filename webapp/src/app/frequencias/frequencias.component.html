@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="container">
+  <form>
+    <div class="card_frequencia">
+      <div class="diminui_frequencia">
+        <div class="circle_button">
+          <button [disabled]="counter <= 1" (click)="Decrement()">-</button>
+        </div>
+      </div>
+      <div class="numero_frequencia">
+        <div class="row">
+          <span>{{counter}}x</span><br>
+          <small>/mês</small>
+        </div>
+      </div>
+      <div class="aumenta_frequencia">
+        <div class="circle_button">
+          <button [disabled]="counter >= 6" (click)="Increment()">+</button>
+        </div>
+      </div>
+      <div class="content_footer_frequencia">
+        <div class="left_block">
+          <div class="mini_block_content">
+            <small>Tempo<br> de serviço</small>
+          </div>
+          <div class="timer_frequencia">
+            <img src="../../assets/imgs/icon_clock_roxo.svg" alt="" height="20">
+            <span>1:30h</span>
+          </div>
+        </div>
+        <div class="right_block">
+          <span class="rs">R$</span><span class="mini_price_span">{{valormensal}}</span>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="opcional_cheirinho">
+        <span>Podemos aplicar cheirinho no interior?</span> <md-slide-toggle [color]="color"></md-slide-toggle>
+    </div> -->
+    <div class="options_addons">
+      <ul>
+        <li id="{{addon.id}}" *ngFor="let addon of addons.addons; let Selecionado of Selecionados" [ngClass]="{'active': Selecionado.active}" (click)="SelectUser(el, event)">
+          <div class="opcional_box" >
+            <div class="row">
+              <img src="../../assets/imgs/addons/{{addon.logo}}" alt="" height="77">
+            </div>
+            <div class="row">
+              <span>{{addon.name}}</span>
+              <div class="box_price">
+                <span>R${{addon.price}}</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="btn_next_frequencias">
+      <button (click)="NextPage()"><span>Próxima</span></button> 
+    </div>
+  </form>
+</div>

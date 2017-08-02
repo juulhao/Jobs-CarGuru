@@ -1,0 +1,42 @@
+header{
+    background: #000!important;
+}
+section{
+    margin-bottom: 30px;
+}
+section h2{
+    font-family: 'lato';
+    color: #F65579;
+    font-weight: 300;
+}
+section span{
+    font-family: 'lato';
+    font-weight: 300;
+    color: #777;
+}
+section:nth-child(4) {
+    text-align: center;
+}
+button{
+    width: 100%;
+    padding: 1.25em;
+    background: #6697e8;
+    border-radius: 100px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'lato';
+}
+ul li{
+    list-style: none
+}
+ul li small{
+    font-family: 'lato';
+    font-weight: 300;
+    color: #777;;
+}
+ul li:last-child small{
+    color:#F65579;
+}
+

@@ -1,0 +1,78 @@
+.agenda_visita {
+    float: left;
+    margin-top: 10%;
+    margin-bottom: 30%;
+    padding-left: 50px;
+    padding-right: 40px;
+}
+.calendario {
+    float: left;
+    margin-bottom: 10px;
+}
+.dia{
+    font-size: 46px;
+    color: #fff;
+    font-family: 'Roboto';
+    position: absolute;
+    left: 66px;
+    top: 139px;
+    width: 75px;
+    text-align: center;
+}
+.data_agendamento{
+    float: left;
+}
+.data_agendamento span{
+    width: 100%;
+    float: left;
+}
+.data_agendamento span:first-child{
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.data_agendamento span:last-child{
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    width: 50%;
+}
+.status_pedido{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.stats_order {
+    width: 33.33%;
+    float: left;
+}
+
+.line_status {
+    width: 100%;
+    background: #722b5d;
+    height: 3px;
+    margin-top: -10px;
+}
+.first-line{
+    margin-left: 50%;
+}
+.last-line{
+    margin-left: -50%;
+}
+.align_itens{
+    text-align: center
+}
+.row{
+    margin-top: 45px;
+}
+button{
+        outline: none;
+    border: 2px solid #39E590;
+    border-radius: 100px;
+    background: none;
+    color: #39E590;
+    font-family: 'Lato',sans-serif;
+    text-transform: uppercase;
+    padding: 15px 40px;
+}

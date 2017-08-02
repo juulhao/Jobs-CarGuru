@@ -1,0 +1,26 @@
+<div class="bg_garagem">
+  <app-header></app-header>
+  <div class="container"> 
+      <div class="card_add_vehicle">
+        <div class="row">
+          <h2>Seu Carro</h2>
+        </div>
+        <form ng-submit="grava()">
+          <div class="row">
+            <md-input-container class="input-full-width">
+              <input id="modelo_veiculo"  mdInput placeholder="Modelo"  [(ngModel)]="modelo" (ngModelChange)="veiculo.modelo = $event"  name="modelo_veiculo">
+            </md-input-container>
+            <md-input-container class="input-full-width">
+              <input id="placa_veiculo"  mdInput placeholder="Placa" [(ngModel)]="placa" (ngModelChange)="veiculo.placa = $event"  name="placa_veiculo">
+            </md-input-container>
+            <md-input-container class="input-full-width">
+              <input id="placa_cor" mdInput placeholder="Cor (opcional)" [(ngModel)]="cor" (ngModelChange)="veiculo.cor = $event" name="cor_veiculo">
+            </md-input-container>  
+          </div>
+          <div class="row">
+            <button md-button type="submit" (click)="grava()">Enviar</button>
+          </div>    
+        </form>
+      </div> 
+  </div> 
+</div>

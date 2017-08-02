@@ -1,0 +1,10 @@
+.box-rating{
+    float: left;
+    width: 100%;
+}
+.box-rating ul{
+    padding: 0;
+}
+.box-rating ul li{
+    list-style: none;
+}

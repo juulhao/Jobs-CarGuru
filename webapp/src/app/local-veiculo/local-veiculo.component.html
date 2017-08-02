@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="container">
+  <div class="panel_map">
+    <div class="overlay_map">
+      <div class="title_panel_map">
+        <h2>Onde está seu carro?</h2>
+      </div>
+      <div class="auto_complete_map">
+        <div class="form_map"> 
+         <app-maps></app-maps>
+        </div>
+      </div>
+    </div>
+    <div class="city_unvailable" *ngIf="2 > 1">
+      {{city_unvailable}}
+    </div>
+    <div class="input_obervacoes">
+      <div class="container">
+        <div class="title_input">
+          <span>Algo mais que<br>precisamos saber?</span>
+        </div>
+        <form>
+          <textarea name="observacoes" rows="2"></textarea>
+        </form>
+        <span>
+          <strong>Ex:</strong> a chave do carro está com o manobrista João no estacionamento.
+        </span>
+      </div>
+    </div>
+  </div>
+  <app-proxima-data></app-proxima-data>
+  <div class="btn_next">
+    <button type="button" class="btn btn-large btn-block btn-default"><span>OK</span></button>
+  </div>
+</div>

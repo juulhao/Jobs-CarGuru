@@ -1,0 +1,37 @@
+<div class="container">
+  <app-header></app-header>
+  <section>
+    <h2>Cadastre-se</h2>
+  </section>
+  <section>
+    <button (click)="onClick">Inscreva-se com o facebook</button>
+  </section>
+  <section>
+    <span>OU</span>
+  </section>
+  <section>
+    <form class="login-form">
+      <md-input-container class="input-full-width">
+        <input mdInput placeholder="Nome completo">
+      </md-input-container>
+      <md-input-container class="input-full-width">
+        <input mdInput placeholder="Email">
+      </md-input-container>
+    </form>
+  </section>
+  <section>
+    <md-grid-list cols="2">
+      <md-grid-tile>
+        <button class="nextBtn pourple" (click)="NextPage()">
+          <span>Pronto <img src="../../assets/imgs/icon_arrow_right.svg" height="13.64"></span>
+        </button>
+      </md-grid-tile>
+      <md-grid-tile>
+        <ul>
+          <li><small>Esqueceu sua senha?</small></li>
+          <li><small>Faça seu login</small></li>
+        </ul>
+      </md-grid-tile>
+    </md-grid-list>
+  </section>
+</div>

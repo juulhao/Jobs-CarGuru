@@ -1,0 +1,36 @@
+.header_modal {
+    font-weight: bold;
+    text-align: center;
+    font-family: 'lato';
+}
+.btn_init_mycity{
+    position: absolute;
+    bottom: 30vh;
+    width: 80.9vw;
+    left: 10vw;
+    padding: 3vh;
+    border-radius: 10px;
+    background: #000;
+    border: none;
+}
+.btn_modal {
+    background: #ee4e7a;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 36px;
+    position: absolute;
+    width: 80%;
+    margin-left: -23px;
+    font-family: 'lato';
+    font-weight: 300;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+.btn_modal span{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.content_modal p{
+    font-family: 'lato';
+}

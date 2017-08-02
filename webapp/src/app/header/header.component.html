@@ -1,0 +1,17 @@
+<header>
+  <div class="btn_nav">
+    <button (click)="toggleMenu()" class="nav_button">
+      <img src="../../assets/imgs/icon_nav.svg" alt="" width="31">
+    </button>
+    
+  </div>
+  <div class="logo">
+    <img src="../../assets/imgs/logo_rosa.svg"> 
+  </div>
+  <div class="alert_user">
+    <img src="../../assets/imgs/Notifications.svg" alt="" height="57">
+  </div>
+</header>
+
+
+<app-nav-menu [@slideInOut]="menuState" class="nav_side" (click)="CloseNav()"></app-nav-menu>

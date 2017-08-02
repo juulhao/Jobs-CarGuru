@@ -1,0 +1,58 @@
+<app-header></app-header>
+<div class="tabs_buttons">
+    <ul class="tabs">
+      <li [ngClass]=" {'active-tab': tab==1 }" (click)=" tab = 1;" [class.active]="ativo"><span>Pagar com cartão</span></li>
+      <li [ngClass]=" {'active-tab': tab==2 }"  (click)=" tab = 2;" ><span>Pagar com boleto</span></li>
+    </ul>
+  </div>
+<div class="container">
+  <div class="content_tabs">
+    <div class="tab-panel" id="cartao" *ngIf="tab==1">
+      <div class="container">
+        <div class="infos_seguranca_cartao">
+          <img src="../../assets/imgs/compra_segura_azul.png" width="19">
+          <small>carteirada vc ta em ambiente seguro <br>fica tranquilo, sem virus.</small>
+        </div>
+        <form action="" method="post" id="pay" name="pay" >
+            <ul>
+                <li>
+                      <label for="cardNumber">Número do Cartão:</label>
+                      <input type="number" id="cardNumber" data-checkout="cardNumber" maxlength="16"  [(ngModel)]="ccNumber" name="cardNumber"/>
+                      
+                </li>
+                <li>
+                      <label for="cardholderName">Nome do Cartão:</label>
+                      <input type="text" id="cardholderName" data-checkout="cardholderName" />
+                </li>
+                <li>
+                      <label for="docNumber">CPF:</label>
+                      <input type="text" id="docNumber" data-checkout="docNumber" />
+                      
+                      <input id="docType" data-checkout="docType" type="hidden" name="docType" value="CPF"> 
+                </li>
+                    
+                <li class="three_components">
+                    <div class="three_div">
+                        <label for="cardExpirationMonth">Mês da validade:</label>
+                        <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" maxlength="2" />
+                    </div>
+                    <div class="three_div">
+                        <label for="cardExpirationYear">Ano da validade:</label>
+                        <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" maxlength="4"  />
+               
+                    </div>
+                    <div class="three_div">
+                        <label for="securityCode">Código de segurança:</label>
+                        <input type="text" id="securityCode" data-checkout="securityCode"  maxlength="3" />
+                    </div> 
+                </li>           
+            </ul>
+            <input id="pay" type="submit" value="Pagar" (click)="doPay()"/>
+        </form>
+      </div>
+    </div>
+    <div class="tab-panel" id="boleto" *ngIf="tab==2">
+        <span>Clique para receber o boleto em seu email</span>
+    </div>
+  </div>
+</div>
