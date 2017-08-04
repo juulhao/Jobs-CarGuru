@@ -6,6 +6,7 @@ body{
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-y: hidden;
 }
 h2{
     font-size: 40px;
@@ -151,7 +152,7 @@ outline: none;
     width: 48%;
 }
 .timer_service .row:not(:first-child){
-    padding-top: 20px;
+    padding-top: 15px;
 }
 .timer_service small{
     font-family: 'Lato',sans-serif;
@@ -160,12 +161,12 @@ outline: none;
     color: #A78297;
 }
 .timer_service span{
-    font-size: 26px;
+    font-size: 1.3em;
     font-family: 'Open-sans', sans-serif;
     color: #A78297;
 }
 .timer_service img{
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .price_plan {
     float: left;
@@ -179,13 +180,13 @@ outline: none;
 }
 .rs{
     color: #654B55;
-    font-size: 26px;
+    font-size: 1.5em;
     font-family: 'Open sans', sans-serif;
 }
 .price_span{
   color: #654B55;
   font-family: 'Open sans', sans-serif;
-  font-size: 51px;
+  font-size: 2.3em;
 }
 .margin-bottom-title-card{
     margin-bottom: 5px;
@@ -236,17 +237,6 @@ display: inline-block
   background: none;
   border: 0;
 }
-/* .autocomplete input{
-    background: none;
-    border: none;
-    border-bottom: 1px solid #fff;
-    width: 90%;
-    outline: none;
-    margin-left: 30px;
-    padding-bottom: 10px;
-    color:#fff;
-    font-family: 'Lato', sans-serif;
-} */
  
 .hamburger span {
   display: block;
@@ -268,4 +258,13 @@ display: inline-block
     width: 100%;
     position: fixed;
     bottom: 0;
+}
+.swiper-button-next {
+    right: 2px;
+}
+.swiper-button-prev.swiper-button-disabled {
+   left: 2px;
+}
+.swiper-button-prev {
+    left: 2px;
 }

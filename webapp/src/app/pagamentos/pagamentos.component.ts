@@ -84,26 +84,26 @@ export class PagamentosComponent implements OnInit {
     }
   };
 
-  doPay(){
-    if(!this.doSubmit){
-        var $form = document.querySelector('#pay');
-        Mercadopago.createToken($form, this.sdkResponseHandler); // The function "sdkResponseHandler" is defined below
-        return false;
-    }
-  };
+    doPay(){
+        if(!this.doSubmit){
+            var $form = document.querySelector('#pay');
+            Mercadopago.createToken($form, this.sdkResponseHandler); // The function "sdkResponseHandler" is defined below
+            return false;
+        }
+    };
 
-  sdkResponseHandler(status, response) {
-    if (status != 200 && status != 201) {
+    sdkResponseHandler(status, response) {
+        if (status != 200 && status != 201) {
+            console.log(response)
+            alert("Por favor, verifique os campos.");
+        }else{
         console.log(response)
-        alert("verify filled data");
-    }else{
-       console.log(response)
+        }
     }
-  }
-  ativo(){
 
-    this.isParaActive = !this.isParaActive;
-    this.isBtnActive = !this.isBtnActive;
-  }
+    ativo(){
+        this.isParaActive = !this.isParaActive;
+        this.isBtnActive = !this.isBtnActive;
+    }
   
 }

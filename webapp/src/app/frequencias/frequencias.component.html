@@ -34,11 +34,12 @@
       </div>
     </div>
     <!-- <div class="opcional_cheirinho">
-        <span>Podemos aplicar cheirinho no interior?</span> <md-slide-toggle [color]="color"></md-slide-toggle>
-    </div> -->
+         <md-checkbox  [color]="color" [(ngModel)]="cheirinho"  name="cheirinho"><span>Podemos aplicar cheirinho no interior?</span></md-checkbox>
+    </div>  -->
+     
     <div class="options_addons">
       <ul>
-        <li id="{{addon.id}}" *ngFor="let addon of addons.addons; let Selecionado of Selecionados" [ngClass]="{'active': Selecionado.active}" (click)="SelectUser(el, event)">
+        <li id="{{addon.id}}" [ngClass]="{ clicked : activeIndex === i }" class="range" *ngFor="let addon of addons.addons; let Selecionado of Selecionados" [(ngModel)]="opcional" name="{{addon.name}}" (click)="getOpcionais()"> 
           <div class="opcional_box" >
             <div class="row">
               <img src="../../assets/imgs/addons/{{addon.logo}}" alt="" height="77">
@@ -54,7 +55,7 @@
       </ul>
     </div>
     <div class="btn_next_frequencias">
-      <button (click)="NextPage()"><span>Próxima</span></button> 
+      <button (click)="Cadastrar()"><span>Próxima</span></button> 
     </div>
   </form>
 </div>

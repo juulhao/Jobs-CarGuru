@@ -2,6 +2,7 @@ import { Router, RouterModule } from '@angular/router';
 import { Component, OnInit, Injectable } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MdDialog } from '@angular/material';
+import { Http, Headers,RequestOptions } from "@angular/http";
 
 @Component({
   selector: 'app-novo-veiculo',
@@ -11,25 +12,39 @@ import { MdDialog } from '@angular/material';
 
 @Injectable()
 export class NovoVeiculoComponent implements OnInit {
-  modelo: string;
-  placa: string;
-  cor: string;
- 
-  constructor(public router: Router) { }
-  
-  private veiculo: Object = {modelo: '', placa: '', cor: ''}; 
-  public grava():void {
-    // envia os dados do palestrante para uma API
-      console.log(this);
-      console.log( "Modelo: " + this.modelo);
-      console.log( "Placa: " + this.placa);
-      console.log( "Cor:" + this.cor );
-      this.modelo, this.cor, this.placa = ''; // limpa o formulário
-      this.router.navigateByUrl('/status-pedido');
-  } 
+  public user; //Vou receber do nativo
+  public model;
+  public license;
+  public cor;
+
+  private veiculo: Object = {
+    user: 'cliente8004@carguruclub.com',
+    make: 'undefined', //autocomplete
+    model: '',
+    license: '',
+    info: '',
+    name: ''
+  }; 
+
+  constructor(public router: Router, private http : Http) { }  
+
+  CadastroVeiculo(event){
+    event.stopPropagation();
+    console.log('Objeto atual:', this.veiculo)
+    let headers =  new Headers();
+    headers.append('Content-Type', 'application/json');
+    /* headers.append('Autorizathion', 'Basic');   */
+    this.http.post('https://middleware.carguruclub.com/Cars/Insert',this.veiculo, { headers : headers } )
+    .subscribe(
+        data => {
+          alert('Carro cadastrado com sucesso!');
+          this.router.navigateByUrl('/status-pedido'); 
+        },
+        err => { alert('Erro ao adicionar veículo') }//err); }
+    );
+  }
 
   ngOnInit() {
- 
   }
 
 }

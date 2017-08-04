@@ -1,3 +1,93 @@
-<p>
-  meus-carros works!
-</p>
+<div class="bg_garagem">
+  <app-header></app-header>
+  <div class="container"> 
+    <div class="row">
+      <h2>Garagem</h2>
+    </div>
+    <div class="row"> 
+      <span>Bem vindo à sua garagem.</span><br>
+      <span>Agora é só adicionar seu(s) carros(s).</span>
+    </div>
+    <div class="row margin_top_row">
+      <span>Meus carros:</span>
+    </div>
+    <div class="row">
+      <swiper [config]="config">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <ul>
+                <li class="lista_carros">
+                  <div class="card_vehicles">
+                    <div class="row">
+                      <span>Nome Carro</span>
+                    </div>
+                    <div class="row">
+                      <span>Endereço do Carro</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <button type="submit">Selecionar Lavagem</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <ul>
+                <li class="lista_carros">
+                  <div class="card_vehicles">
+                    <div class="row">
+                      <span>Nome Carro</span>
+                    </div>
+                    <div class="row">
+                      <span>Endereço do Carro</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <button type="submit">Selecionar Lavagem</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <ul>
+                <li class="lista_carros">
+                  <div class="card_vehicles">
+                    <div class="row">
+                      <span>Nome Carro</span>
+                    </div>
+                    <div class="row">
+                      <span>Endereço do Carro</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <button type="submit">Selecionar Lavagem</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <ul>
+                <li class="lista_carros">
+                  <div class="card_vehicles">
+                    <div class="row">
+                      <span>Nome Carro</span>
+                    </div>
+                    <div class="row">
+                      <span>Endereço do Carro</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <button type="submit">Selecionar Lavagem</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+            <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </swiper>
+    </div>
+  </div> 
+</div>

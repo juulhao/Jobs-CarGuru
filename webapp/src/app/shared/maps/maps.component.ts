@@ -1,7 +1,7 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, Input, Output, EventEmitter } from '@angular/core';
 
 declare const google: any;
-var placeSearch, autocomplete, map;
+var autocomplete, map;
 declare let componentForm : {
   street_number: 'short_name',
   route: 'long_name',
@@ -20,8 +20,8 @@ const myKey = "AIzaSyC_UpDr16muhKiogGMImp8vyuupwf31_Bw";
 
 @Injectable()
 export class MapsComponent implements OnInit {
-  endereco : Object;
-  
+  @Input() endereco : any;
+  SaidaEndereco : String;
 
   constructor() { }
 
@@ -29,6 +29,7 @@ export class MapsComponent implements OnInit {
     this.initAutocomplete();
     
   }
+  
 
   initAutocomplete() {
       // Create the autocomplete object, restricting the search to geographical
@@ -39,7 +40,7 @@ export class MapsComponent implements OnInit {
       // When the user selects an address from the dropdown, populate the address
       // fields in the form.
       autocomplete.addListener('place_changed', this.fillInAddress);
-      console.log(this.endereco);
+      console.log(autocomplete);
   }
   
   fillInAddress() {
@@ -61,6 +62,9 @@ export class MapsComponent implements OnInit {
         autocomplete.setBounds(circle.getBounds());
       });
     }
+  }
+  getValue(){
+    console.log(this.SaidaEndereco); //undefined
   }
 
 }

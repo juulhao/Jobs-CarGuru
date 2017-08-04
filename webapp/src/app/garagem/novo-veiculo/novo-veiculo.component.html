@@ -8,17 +8,17 @@
         <form ng-submit="grava()">
           <div class="row">
             <md-input-container class="input-full-width">
-              <input id="modelo_veiculo"  mdInput placeholder="Modelo"  [(ngModel)]="modelo" (ngModelChange)="veiculo.modelo = $event"  name="modelo_veiculo">
+              <input id="modelo_veiculo"  mdInput placeholder="Modelo"  [(ngModel)]="model" (ngModelChange)="veiculo.model = $event"  name="modelo_veiculo" required>
             </md-input-container>
             <md-input-container class="input-full-width">
-              <input id="placa_veiculo"  mdInput placeholder="Placa" [(ngModel)]="placa" (ngModelChange)="veiculo.placa = $event"  name="placa_veiculo">
+              <input id="placa_veiculo"  mdInput placeholder="Placa" [(ngModel)]="license" (ngModelChange)="veiculo.license = $event"  name="placa_veiculo" required maxlength="7">
             </md-input-container>
             <md-input-container class="input-full-width">
-              <input id="placa_cor" mdInput placeholder="Cor (opcional)" [(ngModel)]="cor" (ngModelChange)="veiculo.cor = $event" name="cor_veiculo">
+              <input id="placa_cor" mdInput placeholder="Cor (opcional)" [(ngModel)]="info" (ngModelChange)="veiculo.info = $event" name="cor_veiculo">
             </md-input-container>  
           </div>
           <div class="row">
-            <button md-button type="submit" (click)="grava()">Enviar</button>
+            <button md-button type="submit" (click)="CadastroVeiculo($event)">Enviar</button>
           </div>    
         </form>
       </div> 

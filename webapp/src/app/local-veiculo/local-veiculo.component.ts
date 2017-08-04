@@ -9,16 +9,18 @@ import { MapsComponent } from './../shared/maps/maps.component';
 })
 
 export class LocalVeiculoComponent implements OnInit {
+  observacoes : Object;
 
   color = 'warn';
-  constructor() { 
+  constructor(public router : Router) { 
   }
   ngOnInit() {
    const initMap = new MapsComponent;
   }
   pegaEnderecos(){
-    const getEnderecos = new MapsComponent;
-   
+    const inputObservacoes = this.observacoes;
+    console.log(inputObservacoes);
+    this.router.navigateByUrl('/pagamentos');
   }
   
 }

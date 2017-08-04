@@ -34,7 +34,7 @@ export class LavagemPremiumComponent implements OnInit {
         Valor: 89  
       })); 
     console.log(this.PlanBasico);
-   ;
+   this.router.navigate(['/frequencias']);
   }
 
 }

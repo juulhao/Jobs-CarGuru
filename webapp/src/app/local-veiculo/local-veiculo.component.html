@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <div class="city_unvailable" *ngIf="2 > 1">
+    <div class="city_unvailable">
       {{city_unvailable}}
     </div>
     <div class="input_obervacoes">
@@ -20,7 +20,7 @@
           <span>Algo mais que<br>precisamos saber?</span>
         </div>
         <form>
-          <textarea name="observacoes" rows="2"></textarea>
+          <textarea name="observacoes" rows="2" [(ngModel)]="observacoes" (change)="pegaEnderecos()"></textarea>
         </form>
         <span>
           <strong>Ex:</strong> a chave do carro está com o manobrista João no estacionamento.
@@ -30,6 +30,6 @@
   </div>
   <app-proxima-data></app-proxima-data>
   <div class="btn_next">
-    <button type="button" class="btn btn-large btn-block btn-default"><span>OK</span></button>
+    <button type="button" (click)="pegaEnderecos()"><span>OK</span></button>
   </div>
 </div>

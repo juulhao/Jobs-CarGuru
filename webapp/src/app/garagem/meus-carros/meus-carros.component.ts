@@ -11,5 +11,14 @@ export class MeusCarrosComponent implements OnInit {
 
   ngOnInit() {
   }
+    //Draggable Swipe Cards
+      config: Object = {
+      pagination: '.swiper-pagination',
+      direction: 'vertical',
+      slidesPerView: 3,
+      paginationClickable: true,
+      spaceBetween: 10,
+      mousewheelControl: true
+  };
 
 }

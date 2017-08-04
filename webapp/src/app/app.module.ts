@@ -1,4 +1,3 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,10 +18,7 @@ import 'hammerjs';
 
 
 import { AppComponent } from './app.component';
-import { IntroComponent } from './intro/intro.component';
-import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
-import { ModalIntroComponent } from './modal-intro/modal-intro.component';
 import { PlanosComponent } from './planos/planos.component';
 import { FrequenciasComponent } from './frequencias/frequencias.component';
 import { LavagemBasicaComponent } from './planos/lavagem-basica/lavagem-basica.component';
@@ -44,17 +40,16 @@ import { RatingPedidoComponent } from './garagem/status-pedidos/rating-pedido/ra
 import { MapsComponent } from './shared/maps/maps.component';
 import { MercadoPagoService } from './shared/mercado-pago.service';
 
+import { FrequenciasService } from './frequencias/frequencias.service';
 import { PlanosService } from './planos/planos.service';
-
+import { ObservacoesComponent } from './pagamentos/observacoes/observacoes.component';
+import { CartComponent } from './Core/cart/cart.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    IntroComponent,
-    LoginComponent,
     HeaderComponent,
-    ModalIntroComponent,
     PlanosComponent,
     FrequenciasComponent,
     LavagemBasicaComponent,
@@ -74,7 +69,8 @@ import { PlanosService } from './planos/planos.service';
     StatusPedidosComponent,
     RatingPedidoComponent,
     MapsComponent,
-    
+    ObservacoesComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -88,11 +84,8 @@ import { PlanosService } from './planos/planos.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  entryComponents: [
-    ModalIntroComponent
-  ],
   providers: 
-  [ PlanosService, MercadoPagoService, PerfilUser , MapsComponent],
+  [ PlanosService, MercadoPagoService, PerfilUser, FrequenciasService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

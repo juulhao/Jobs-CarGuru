@@ -1,10 +1,15 @@
 .tabs{
     padding: 0;
 }
+.infos_seguranca_cartao {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
 .tabs li{
     list-style: none;
     display: inline-block;
-    width: 50%;
+    width: 100%;
     float: left;
     text-align: center;
     padding-top: 22px;
@@ -66,10 +71,10 @@ list-style: none;
 width: 100%;
 }
 .three_div{
-     width: 31.11%;
+    width: 31.26%;
     float: left;
     padding-top: 3px;
-    margin-right: 10px;
+    margin-right: 9px;
 }
 .three_div:last-child{
     margin-right: 0;
