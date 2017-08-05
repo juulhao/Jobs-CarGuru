@@ -20,32 +20,30 @@ const myKey = "AIzaSyC_UpDr16muhKiogGMImp8vyuupwf31_Bw";
 
 @Injectable()
 export class MapsComponent implements OnInit {
-  @Input() endereco : any;
-  SaidaEndereco : String;
+  SaidaEndereco;
 
   constructor() { }
 
   ngOnInit() {
     this.initAutocomplete();
+
     
   }
-  
-
   initAutocomplete() {
-      // Create the autocomplete object, restricting the search to geographical
-      // location types.
-      autocomplete = new google.maps.places.Autocomplete(
-          /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-          {types: ['geocode']});
-      // When the user selects an address from the dropdown, populate the address
-      // fields in the form.
-      autocomplete.addListener('place_changed', this.fillInAddress);
-      console.log(autocomplete);
+    // Create the autocomplete object, restricting the search to geographical
+    // location types.
+    autocomplete = new google.maps.places.Autocomplete(
+        /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+        {types: ['geocode']});
+    // When the user selects an address from the dropdown, populate the address
+    // fields in the form.
+    autocomplete.addListener('place_changed', this.fillInAddress);
+    console.log(autocomplete);
   }
   
   fillInAddress() {
     // Get the place details from the autocomplete object.
-    var place = autocomplete.getPlace();
+    const place = autocomplete.getPlace();
   }
   
   geolocate() {
@@ -64,6 +62,7 @@ export class MapsComponent implements OnInit {
     }
   }
   getValue(){
+    document.getElementById('autocomplete')
     console.log(this.SaidaEndereco); //undefined
   }
 

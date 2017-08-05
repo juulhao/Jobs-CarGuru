@@ -18,8 +18,8 @@ export class LocalVeiculoComponent implements OnInit {
    const initMap = new MapsComponent;
   }
   pegaEnderecos(){
-    const inputObservacoes = this.observacoes;
-    console.log(inputObservacoes);
+    
+    console.log(this.observacoes);
     this.router.navigateByUrl('/pagamentos');
   }
   
