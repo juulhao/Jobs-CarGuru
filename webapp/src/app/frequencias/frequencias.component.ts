@@ -22,8 +22,10 @@ export class FrequenciasComponent {
   public opcionais :  number;
   public _cheirinho : boolean = false;
   public addons:  Observable<Array<any>>;
+  public selecionado: boolean = false;
 
   constructor(public http: Http,public router : Router) {
+    this.selecionado = this.selecionado;
   }
   
   ngOnInit(){
@@ -39,25 +41,23 @@ export class FrequenciasComponent {
       }, erro => console.log('Erro ao carregar serviços'));
   }
   getAddons(){
-    const Frequencia = this.Increment();
-    console.log(Frequencia);
+    const Frequencia = this.valormensal;
+    const _Opcionais = this.getOpcionais;
+    this.router.navigateByUrl('/local-veiculo');
   }
-  getOpcionais(){
+
+  getOpcionais(selecionado){
     const cheirinho = document.getElementById('lavagem_cheirinho').addEventListener('click', function(){
       console.log("Cheirinho ativado");
-      document.getElementById('lavagem_cheirinho').style.border = "1px solid #000";
-      if(document.getElementById('lavagem_cheirinho').style.border = "1px solid #000"){
-        document.getElementById('lavagem_cheirinho').addEventListener('click', function(){
-          document.getElementById('lavagem_cheirinho').style.border = "none";
-        });
-      }
-      
+      return selecionado;
     });
     const snacks = document.getElementById('snacks').addEventListener('click', function(){
       console.log("snacks ativado");
+      return selecionado;
     });
     const lencos = document.getElementById('lenco').addEventListener('click', function(){
       console.log("lenco ativado");
+      return selecionado;
     });
   }
   Increment(){

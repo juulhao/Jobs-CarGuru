@@ -152,7 +152,7 @@ outline: none;
     width: 48%;
 }
 .timer_service .row:not(:first-child){
-    padding-top: 15px;
+    padding-top: 7px;
 }
 .timer_service small{
     font-family: 'Lato',sans-serif;
@@ -175,8 +175,9 @@ outline: none;
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
-    padding-top: 20px;
+    padding-top: 10px;
     width: 50%;
+    padding-bottom: 5px;
 }
 .rs{
     color: #654B55;

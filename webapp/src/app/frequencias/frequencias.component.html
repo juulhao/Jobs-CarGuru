@@ -33,29 +33,26 @@
         </div>
       </div>
     </div>
-    <!-- <div class="opcional_cheirinho">
-         <md-checkbox  [color]="color" [(ngModel)]="cheirinho"  name="cheirinho"><span>Podemos aplicar cheirinho no interior?</span></md-checkbox>
-    </div>  -->
-     
     <div class="options_addons">
       <ul>
-        <li id="{{addon.id}}" [ngClass]="{ clicked : activeIndex === i }" class="range" *ngFor="let addon of addons.addons; let Selecionado of Selecionados" [(ngModel)]="opcional" name="{{addon.name}}" (click)="getOpcionais()"> 
+        <li id="{{addon.id}}" [ngClass]="{ clicked : true }" class="range" *ngFor="let addon of addons.addons; let Selecionado of Selecionados" [(ngModel)]="opcional" name="{{addon.name}}" (click)="getOpcionais()"> 
           <div class="opcional_box" >
             <div class="row">
               <img src="../../assets/imgs/addons/{{addon.logo}}" alt="" height="77">
             </div>
             <div class="row">
-              <span>{{addon.name}}</span>
+              <span>{{addon.name}}</span> 
               <div class="box_price">
                 <span>R${{addon.price}}</span>
               </div>
             </div>
+            <md-checkbox [(ngModel)]="selecionado" [color]="color" class="green"></md-checkbox>
           </div>
         </li>
       </ul>
     </div>
     <div class="btn_next_frequencias">
-      <button (click)="Cadastrar()"><span>Próxima</span></button> 
+      <button (click)="getAddons()"><span>Próxima</span></button> 
     </div>
   </form>
 </div>

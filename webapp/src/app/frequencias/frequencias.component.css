@@ -192,3 +192,6 @@ button{
 .ativo{
     border:1px solid #dedede;
 }
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: #f65579!important;
+}
