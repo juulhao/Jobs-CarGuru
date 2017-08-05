@@ -14,33 +14,33 @@
         <ul>
             <li>
                     <label for="cardNumber">Número do Cartão:</label>
-                    <input type="number" id="cardNumber" data-checkout="cardNumber" maxlength="16"  [(ngModel)]="ccNumber" name="cardNumber" required/>
+                    <input type="number" id="cardNumber" data-checkout="cardNumber" maxlength="16"  [(ngModel)]="ccNumber" name="cardNumber" required mdInput/>
                     
             </li>
             <li>
                     <label for="cardholderName">Nome do Cartão:</label>
-                    <input type="text" id="cardholderName" data-checkout="cardholderName" required/>
+                    <input type="text" id="cardholderName" data-checkout="cardholderName" required mdInput/>
             </li>
             <li>
                     <label for="docNumber">CPF:</label>
                     <input type="text" id="docNumber" data-checkout="docNumber" />
                     
-                    <input id="docType" data-checkout="docType" type="hidden" name="docType" value="CPF" required> 
+                    <input id="docType" data-checkout="docType" type="hidden" name="docType" value="CPF" required mdInput> 
             </li>
                 
             <li class="three_components">
                 <div class="three_div">
                     <label for="cardExpirationMonth">Mês validade:</label>
-                    <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" maxlength="2" required/>
+                    <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" maxlength="2" required mdInput/>
                 </div>
                 <div class="three_div">
                     <label for="cardExpirationYear">Ano validade:</label>
-                    <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" maxlength="4"  required/>
+                    <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" maxlength="4"  required mdInput/>
             
                 </div>
                 <div class="three_div">
                     <label for="securityCode">CCV:</label>
-                    <input type="text" id="securityCode" data-checkout="securityCode"  maxlength="3" required/>
+                    <input type="text" id="securityCode" data-checkout="securityCode"  maxlength="3" required mdInput/>
                 </div> 
             </li>           
         </ul>
