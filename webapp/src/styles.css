@@ -2,11 +2,13 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
 body{
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 h2{
     font-size: 40px;
@@ -37,7 +39,7 @@ h2{
     position: absolute;
     left: 0;
     right: 0;
-    top: 80%;
+    top: 77%;
 }
 .CardActive{
     border: 1px solid #F65579;
@@ -268,4 +270,11 @@ display: inline-block
 }
 .swiper-button-prev {
     left: 2px;
+}
+.borda-item{
+    border: 2px solid #f65579!important;
+}
+div#proxima_data {
+    float: left;
+    width: 100%;
 }

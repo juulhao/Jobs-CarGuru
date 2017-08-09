@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule, MdIconModule, MdIconRegistry, MdTabsModule} from '@angular/material';
+import { MaterialModule, MdIconModule, MdIconRegistry, MdTabsModule } from '@angular/material';
 import { routing } from './app.routing';
 import { Router, RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
@@ -10,6 +10,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { Ng2CompleterModule } from "ng2-completer";
 import { FormsModule,FormControl, ReactiveFormsModule, FormGroup } from "@angular/forms";
 import { AgmCoreModule } from '@agm/core';
+
+
 
 import { PerfilUser } from './Core/perfil-plano';
 
@@ -38,13 +40,13 @@ import { NovoVeiculoComponent } from './garagem/novo-veiculo/novo-veiculo.compon
 import { StatusPedidosComponent } from './garagem/status-pedidos/status-pedidos.component';
 import { RatingPedidoComponent } from './garagem/status-pedidos/rating-pedido/rating-pedido.component';
 import { MapsComponent } from './shared/maps/maps.component';
-import { MercadoPagoService } from './shared/mercado-pago.service';
+import { ObservacoesComponent } from './pagamentos/observacoes/observacoes.component';
+import { CupomComponent } from './shared/cupom/cupom.component';
 
+import { MercadoPagoService } from './shared/mercado-pago.service';
 import { FrequenciasService } from './frequencias/frequencias.service';
 import { PlanosService } from './planos/planos.service';
-import { ObservacoesComponent } from './pagamentos/observacoes/observacoes.component';
-import { CartComponent } from './Core/cart/cart.component';
-
+import { AuthService } from './Core/auth.service';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,7 @@ import { CartComponent } from './Core/cart/cart.component';
     RatingPedidoComponent,
     MapsComponent,
     ObservacoesComponent,
-    CartComponent
+    CupomComponent, 
   ],
   imports: [
     BrowserModule,
@@ -79,13 +81,14 @@ import { CartComponent } from './Core/cart/cart.component';
     HttpModule,
     BrowserAnimationsModule,
     SwiperModule,
+  
     routing,
     Ng2CompleterModule,
     FormsModule,
     ReactiveFormsModule
   ],
   providers: 
-  [ PlanosService, MercadoPagoService, PerfilUser, FrequenciasService ],
+  [ PlanosService, MercadoPagoService, PerfilUser, FrequenciasService, AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,15 +13,8 @@ export class LavagemPremiumComponent implements OnInit {
   planos:  Observable<Array<any>>;
   plano: Http;
   Valores: Object[] = [];
-  PlanBasico;
-
+  PlanPremium;
   constructor(http: Http,public router: Router) { 
-    http
-    .get('https://api.carguruclub.com/v1/servicos/')
-    .map(res => res.json())
-    .subscribe(planos => {
-      this.planos = planos;
-    }, erro => console.log(erro));
   }
 
   ngOnInit() {
@@ -29,12 +22,12 @@ export class LavagemPremiumComponent implements OnInit {
 
   postPlans(event){
     event.preventDefault();    
-      this.PlanBasico = JSON.parse(JSON.stringify({
+      this.PlanPremium = JSON.parse(JSON.stringify({
         plano: "Lavagem Premium",
         Valor: 89  
       })); 
-    console.log(this.PlanBasico);
-   this.router.navigate(['/frequencias']);
+    console.log(this.PlanPremium);
+   this.router.navigate(['/frequencias'], {queryParams: this.PlanPremium});
   }
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit, Injectable, Input, Output, EventEmitter } from '@angular/core';
-
 declare const google: any;
 var autocomplete, map;
 declare let componentForm : {
@@ -21,7 +20,8 @@ const myKey = "AIzaSyC_UpDr16muhKiogGMImp8vyuupwf31_Bw";
 @Injectable()
 export class MapsComponent implements OnInit {
   SaidaEndereco;
-
+  isRequired = false;
+  
   constructor() { }
 
   ngOnInit() {

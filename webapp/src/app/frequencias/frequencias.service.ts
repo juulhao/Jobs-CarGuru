@@ -7,7 +7,7 @@ export class FrequenciasService {
   private http: Http
   private apiUrl = 'https://api.carguruclub.com/v1/servicos/';  // URL para web api
 
-  dadosPlanos = {'teste' : 'name'};
+  dadosPlanos = '';
   constructor() {
   } 
 

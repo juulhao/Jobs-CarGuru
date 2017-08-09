@@ -1,10 +1,4 @@
 <app-header></app-header>
-<!-- <div class="tabs_buttons">
-    <ul class="tabs">
-      <li [ngClass]=" {'active-tab': tab==1 }" (click)=" tab = 1;" [class.active]="ativo"><span>Pagar com cartão</span></li>
-      <li [ngClass]=" {'active-tab': tab==2 }"  (click)=" tab = 2;" ><span>Pagar com boleto</span></li>
-    </ul>
-</div> -->
 <div class="container">
     <div class="infos_seguranca_cartao">
           <img src="../../assets/imgs/compra_segura_azul.png" width="19">
@@ -14,36 +8,36 @@
         <ul>
             <li>
                     <label for="cardNumber">Número do Cartão:</label>
-                    <input type="number" id="cardNumber" data-checkout="cardNumber" maxlength="16"  [(ngModel)]="ccNumber" name="cardNumber" required mdInput/>
+                    <input type="number" id="cardNumber" data-checkout="cardNumber" maxlength="16"  [(ngModel)]="ccNumber" name="cardNumber" required/>
                     
             </li>
             <li>
                     <label for="cardholderName">Nome do Cartão:</label>
-                    <input type="text" id="cardholderName" data-checkout="cardholderName" required mdInput/>
+                    <input type="text" id="cardholderName" data-checkout="cardholderName" required/>
             </li>
             <li>
                     <label for="docNumber">CPF:</label>
                     <input type="text" id="docNumber" data-checkout="docNumber" />
                     
-                    <input id="docType" data-checkout="docType" type="hidden" name="docType" value="CPF" required mdInput> 
+                    <input id="docType" data-checkout="docType" type="hidden" name="docType" value="CPF" required> 
             </li>
                 
             <li class="three_components">
                 <div class="three_div">
                     <label for="cardExpirationMonth">Mês validade:</label>
-                    <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" maxlength="2" required mdInput/>
+                    <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" maxlength="2" required/>
                 </div>
                 <div class="three_div">
                     <label for="cardExpirationYear">Ano validade:</label>
-                    <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" maxlength="4"  required mdInput/>
+                    <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" maxlength="4"  required/>
             
                 </div>
                 <div class="three_div">
                     <label for="securityCode">CCV:</label>
-                    <input type="text" id="securityCode" data-checkout="securityCode"  maxlength="3" required mdInput/>
+                    <input type="text" id="securityCode" data-checkout="securityCode"  maxlength="3" required/>
                 </div> 
             </li>           
         </ul>
-        <input id="pay" type="submit" value="Pagar" (click)="doPay()"/>
+        <input id="pay" type="submit" value="Pagar" (click)="doPay()" [routerLink]="['/resumo']">
     </form>
 </div>

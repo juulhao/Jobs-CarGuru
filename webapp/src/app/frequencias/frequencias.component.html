@@ -34,9 +34,13 @@
       </div>
     </div>
     <div class="options_addons">
+      <div class="cheirinho_box">
+        <span>Podemos aplicar cheirinho interior?</span> <input id="Toggle" type="checkbox">
+        <label for="Toggle"><span>Power</span></label>
+      </div>
       <ul>
-        <li id="{{addon.id}}" [ngClass]="{ clicked : true }" class="range" *ngFor="let addon of addons.addons; let Selecionado of Selecionados" [(ngModel)]="opcional" name="{{addon.name}}" (click)="getOpcionais()"> 
-          <div class="opcional_box" >
+        <li id="{{addon.id}}"  class="range" *ngFor="let addon of addons.addons; let Selecionado of Selecionados"  (click)="getOpcionais()"> 
+          <div class="opcional_box" [class.borda-item]="opcionais">
             <div class="row">
               <img src="../../assets/imgs/addons/{{addon.logo}}" alt="" height="77">
             </div>
@@ -46,7 +50,6 @@
                 <span>R${{addon.price}}</span>
               </div>
             </div>
-            <md-checkbox [(ngModel)]="selecionado" [color]="color" class="green"></md-checkbox>
           </div>
         </li>
       </ul>

@@ -39,14 +39,6 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
   }
-  createObject(){
-   const PlanoBasico = this.Basico.postPlans;
-   const PlanoPremium = this.Premium.postPlans;
-   const PlanoGuru = this.Guru.postPlans;
-   const Cheirinho = this.cheirinho;
- /*    this.Basico.PlanBasico;
-    console.log(this.Basico.PlanBasico); */
-    console.log(PlanoBasico);
-  }
+  
 
 }

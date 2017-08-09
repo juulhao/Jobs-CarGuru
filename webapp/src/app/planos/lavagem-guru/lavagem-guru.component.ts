@@ -14,16 +14,9 @@ import { PlanosComponent } from './../planos.component';
 export class LavagemGuruComponent implements OnInit {
   planos:  Observable<Array<any>>;
   plano: Http;
-  Valores: Object[] = [];
-  PlanBasico;
+  PlanGuru;
 
   constructor(http: Http,public router: Router) { 
-    http
-    .get('https://api.carguruclub.com/v1/servicos/')
-    .map(res => res.json())
-    .subscribe(planos => {
-      this.planos = planos;
-    }, erro => console.log(erro));
   }
  
   ngOnInit() {
@@ -31,12 +24,12 @@ export class LavagemGuruComponent implements OnInit {
   }
   postPlans(event){
     event.preventDefault();    
-      this.PlanBasico = JSON.parse(JSON.stringify({
+      this.PlanGuru = JSON.parse(JSON.stringify({
         plano: "Lavagem Guru",
         Valor: 55  
       })); 
-    console.log(this.PlanBasico)
-     this.router.navigate(['/frequencias'])
+    console.log(this.PlanGuru)
+    this.router.navigate(['/frequencias'], {queryParams: this.PlanGuru});
   }
 
 }

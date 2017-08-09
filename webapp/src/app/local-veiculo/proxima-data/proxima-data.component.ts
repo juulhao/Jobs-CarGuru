@@ -13,25 +13,19 @@ import 'rxjs/add/observable/throw';
 })
 
 export class ProximaDataComponent implements OnInit {
-
+  api : any;
  
   constructor(private _http:Http){}
 
-  postregister(api:any){
-//      console.log(api);
-  let headers = new Headers({'Content-Type':'application/x-www-form-urlencoded'});
-  let options = new RequestOptions({ headers: headers, method: "post"});
-      return this._http.get(api,options)
-          .map(res => res.json())
-          .catch(this.handleError);
+  postregister(){
+    let headers = new Headers({'Content-Type':'application/x-www-form-urlencoded'});
+    let options = new RequestOptions({ headers: headers, method: "post"});
+    return this._http.get('https://beta-avulso.carguruclub.com.br/api/Calendario/proximoHorarioDisponivelObj?estado=SP&cidade=São Paulo')
+    .map((res:Response) => res.json())
   }
-  private handleError (error: Response) {
-        console.error(error);
-        return Observable.throw(error.json().error || ' error');
-  }
-
-
+  
   ngOnInit() {
+    this.postregister();
   }
 
 }

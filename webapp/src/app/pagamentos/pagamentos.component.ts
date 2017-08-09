@@ -1,5 +1,5 @@
-
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { MdTabsModule } from '@angular/material';
 import { PlanosComponent } from './../planos/planos.component';
 import { FormGroup, FormBuilder, Validators, FormControl, NgForm } from '@angular/forms';
@@ -17,6 +17,7 @@ Mercadopago.getIdentificationTypes();
   styleUrls: ['./pagamentos.component.css']
 })
 export class PagamentosComponent implements OnInit {
+  
   tab: number = 2;
   isParaActive:boolean = false;
   isBtnActive:boolean = false;
@@ -26,7 +27,7 @@ export class PagamentosComponent implements OnInit {
   @Input() ccNumber;
   @Input() PayButton;
 
-  constructor() {
+  constructor(private router : Router) {
   }
 
   ngOnInit() {
@@ -90,6 +91,7 @@ export class PagamentosComponent implements OnInit {
             Mercadopago.createToken($form, this.sdkResponseHandler); // The function "sdkResponseHandler" is defined below
             return false;
         }
+       
     };
 
     sdkResponseHandler(status, response) {
@@ -97,7 +99,8 @@ export class PagamentosComponent implements OnInit {
             console.log(response)
             alert("Por favor, verifique os campos.");
         }else{
-        console.log(response)
+            alert('Seu pagamento foi efetuado com suceso!');
+           
         }
     }
 

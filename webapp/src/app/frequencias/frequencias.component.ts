@@ -5,6 +5,10 @@ import { Http, Headers } from "@angular/http";
 import { Observable } from "rxjs/Rx";
 import { FormControl, FormGroup, FormArray, FormBuilder, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MdSlideToggleModule} from '@angular/material';
+import { LavagemGuruComponent } from './../planos/lavagem-guru/lavagem-guru.component';
+import { LavagemPremiumComponent } from './../planos/lavagem-premium/lavagem-premium.component';
+import { LavagemBasicaComponent } from './../planos/lavagem-basica/lavagem-basica.component';
 
 @Component({
 
@@ -18,70 +22,74 @@ export class FrequenciasComponent {
   public color = 'warn';
   public counter : number = 1;
   public limite : number = 6;
-  public valormensal : number = 48;
-  public opcionais :  number;
+
+  public opcionais = false;
   public _cheirinho : boolean = false;
   public addons:  Observable<Array<any>>;
   public selecionado: boolean = false;
-
+  public Basico : LavagemBasicaComponent;
+  public Prmeium : LavagemPremiumComponent;
+  public Guru : LavagemGuruComponent;
+  PlanoSelecinado;
+  checked = false;
+  disabled = false;
+  valorPlano : string;
+  public valormensal : number = Number(this.valorPlano);
   constructor(public http: Http,public router : Router) {
     this.selecionado = this.selecionado;
   }
   
   ngOnInit(){
     this.listaServicos();
+    this.recuperaPlano();
+  
   }
-  listaServicos(){
-    this.http
-      .get('https://api.carguruclub.com/v1/servicos/')
-      .map(res => res.json())
-      .subscribe(addons => {
-        this.addons = addons;
-        console.log(this.addons);
-      }, erro => console.log('Erro ao carregar serviços'));
+  recuperaPlano(){
+    const param = this.router.parseUrl(this.router.url).queryParams;
+    this.valorPlano = param.Valor;
+    console.log(this.valorPlano);
   }
   getAddons(){
     const Frequencia = this.valormensal;
     const _Opcionais = this.getOpcionais;
     this.router.navigateByUrl('/local-veiculo');
   }
-
-  getOpcionais(selecionado){
-    const cheirinho = document.getElementById('lavagem_cheirinho').addEventListener('click', function(){
-      console.log("Cheirinho ativado");
-      return selecionado;
-    });
-    const snacks = document.getElementById('snacks').addEventListener('click', function(){
-      console.log("snacks ativado");
-      return selecionado;
-    });
-    const lencos = document.getElementById('lenco').addEventListener('click', function(){
-      console.log("lenco ativado");
-      return selecionado;
-    });
+  listaServicos(){
+    this.http
+    .get('https://api.carguruclub.com/v1/servicos/')
+    .map(res => res.json())
+    .subscribe(addons => {
+      this.addons = addons;
+      console.log(this.addons);
+    }, erro => console.log('Erro ao carregar serviços'));
+  }
+  getOpcionais(event, el){
+    el = document.getElementsByClassName("opcional_box");
+    for (var i = 0; i < el.length; i++) {
+      console.log(el[i].id);
+    }
   }
   Increment(){
     this.counter++;
     //Aqui o mundo paralelo começa: Switch contando a partir do 0!!!
     switch (this.counter){
       case 1:
-        this.valormensal = 43.20;
+       this.valormensal = Number(this.valorPlano) % 10;
         break;
       case 2:
-        this.valormensal = 40.32;
+        this.valormensal = Number(this.valorPlano)  % 16;
         console.log('3');
         break;
       case 3:
-        this.valormensal = 39.36;
+        this.valormensal = Number(this.valorPlano)  % 18;
         console.log('4');
         break;
       case 4:
-        
-        this.valormensal = 38.40;
+        this.valormensal = Number(this.valorPlano)  % 20;
         console.log('5');
         break;
       case 5:
-        this.valormensal = 36.96;
+        this.valormensal = Number(this.valorPlano)  % 23;
         console.log('6');
         break;
       default:
@@ -94,7 +102,7 @@ export class FrequenciasComponent {
     //Aqui o mundo paralelo começa: Switch contando a partir do 0!!!
     switch (this.counter){
       case 6:
-        this.valormensal = 36.96;
+        Number(this.valorPlano) / 1;
         console.log('6');
       break;
       case 5:
@@ -114,7 +122,7 @@ export class FrequenciasComponent {
         console.log('2');
       break;
       case 1:
-        this.valormensal = 48;
+        Number(this.valorPlano) / 4;
         console.log('1');
       break;
     default:

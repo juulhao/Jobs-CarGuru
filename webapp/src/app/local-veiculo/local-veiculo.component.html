@@ -7,7 +7,9 @@
       </div>
       <div class="auto_complete_map">
         <div class="form_map"> 
-         <app-maps></app-maps>
+          <form>
+            <input id="autocomplete" class="mdInput"  (focus)="geolocate()" type="text" (change)="getValue()" ([ngModel])="SaidaEndereco" required/> 
+          </form>
         </div>
       </div>
     </div>
@@ -20,13 +22,16 @@
           <span>Algo mais que<br>precisamos saber?</span>
         </div>
         <form>
-          <textarea name="observacoes" rows="2" [(ngModel)]="observacoes" (change)="pegaEnderecos()"></textarea>
+          <textarea class="mdInput" name="observacoes" rows="2" [(ngModel)]="observacoes" (change)="pegaEnderecos()"></textarea>
         </form>
         <span>
           <strong>Ex:</strong> a chave do carro está com o manobrista João no estacionamento.
         </span>
       </div>
     </div>
+  </div>
+  <div id="proxima_data"> 
+    <app-proxima-data></app-proxima-data>
   </div>
   <div class="btn_next">
     <button type="button" (click)="pegaEnderecos()"><span>OK</span></button>

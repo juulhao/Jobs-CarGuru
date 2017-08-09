@@ -1,18 +1,32 @@
-
 <div class="card_plans">
    <form (submit)="postPlans($event)">
     <div class="border_line"></div>
     <div class="container">
       <div class="avatar_thumb">
-        <img class="img-circle" md-card-image src="https://unsplash.it/200/300/?random">
+        <img class="img-circle" md-card-image src="https://unsplash.it/200/300?image=0">
       </div>
       <div class="row margin-bottom-title-card">
-        <span class="title-plans">{{planos.products[2].name}}</span>
+        <span class="title-plans">Lavagem Premium</span>
       </div>
       <div class="row">
         <ul class="itens_planos">
-          <li *ngFor="let plano of planos.products[2].features">
-            <span>{{plano.name}}</span>
+          <li>
+            <span>Checklist</span>
+          </li>
+          <li>
+            <span>Calibragem de pneu</span>
+          </li>
+          <li>
+            <span>Interna e externa</span>
+          </li>
+          <li>
+            <span>Brilho extra</span>
+          </li>
+          <li>
+            <span>Enceramento</span>
+          </li>
+          <li>
+            <span>Seguro chuva</span>
           </li>
         </ul>
       </div>
@@ -21,19 +35,19 @@
           <small>tempo de serviço</small>
         </div>
         <div class="row">
-          <img src="../../../assets/imgs/icon_clock_roxo.svg" height="23"><span>{{planos.products[2].duration}}min</span>
+          <img src="../../../assets/imgs/icon_clock_roxo.svg" height="23"><span>120min</span>
         </div>
       </div>
       <div class="price_plan">
-        <span class="rs">R$</span><span class="price_span">{{planos.products[2].price}}</span>
+        <span class="rs">R$</span><span class="price_span">89</span>
       </div>
     </div>
 
-    <div class="promotional_container">
+     <div class="promotional_container">
       <button id="plan_premium"><img src="../../../assets/imgs/icon_cupom_add.svg" height="26"><span>Adicionar Cupom Promocional</span></button>
       <div class="btn_next_plans">
         <button><span>Próximo</span></button>
       </div>
-    </div>
+    </div> 
   </form>
 </div>
